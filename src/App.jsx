@@ -9,6 +9,7 @@ import snow from "./assets/snow.png";
 import humidityIcon from "./assets/humidity.png";
 import windIcon from "./assets/wind.png";
 import searchIcon from "./assets/search.png";
+import cloudError from "./assets/cloud-error.png";
 
 const iconFor = (code) => {
   if (code === 0) return clearsun;
@@ -90,8 +91,21 @@ export default function App() {
         </button>
       </form>
 
-      {loading && <p className="message">Loading…</p>}
-      {error && <p className="message error">{error}</p>}
+      {loading && (
+  <div className="spinner-wrap">
+    <div className="spinner">
+      <div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div>
+    </div>
+    <p className="spinner-text">Loading weather...</p>
+  </div>
+)}
+     {error && (
+  <div className="error-box">
+    <img src={cloudError} alt="error" className="error-icon" />
+    <p className="error-text">{error}</p>
+  </div>
+)}
 
       {data && !loading && (
         <>
