@@ -1,0 +1,171 @@
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #050647;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0; /* reset any default margin */
+}
+
+.search input {
+  flex: 1;
+  width: 100%; /* explicit width so it fills the search container fully */
+  margin: 0; /* reset default input margin */
+  border: 2px solid #4ab8ff;
+  border-radius: 10px;
+  padding: 12px 50px 12px 15px;
+  font-size: 16px;
+  outline: none;
+  color: #1f2937;
+  text-align: left;
+}
+.search button {
+  position: absolute;
+  right: 16px; /* was 10px — gives more space from the edge */
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search button img {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+.weather-icon {
+  display: block;
+  margin: 24px auto 8px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.temp {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.city {
+  text-align: center;
+  color: #f5b400;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0 0;
+  letter-spacing: 2px;
+}
+
+.country {
+  text-align: center;
+  color: #6b7280;
+  letter-spacing: 4px;
+  margin: 4px 0 16px;
+  font-size: 14px;
+}
+
+.coords {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.coords p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.coords span {
+  display: block;
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 4px;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.detail p {
+  margin: 6px 0 0;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.detail span {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.footer b {
+  color: #4b5563;
+}
+
+.message {
+  text-align: center;
+  margin-top: 24px;
+  color: #6b7280;
+}
+
+.error {
+  color: #dc2626;
+}
