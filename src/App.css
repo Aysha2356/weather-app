@@ -7,7 +7,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #050647;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   width: 100vw;
   min-height: 100vh;
   display: flex;
@@ -18,7 +22,9 @@ body {
 .card {
   width: 90%;
   max-width: 400px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -29,24 +35,24 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 0; /* reset any default margin */
+  margin: 0;
 }
 
 .search input {
   flex: 1;
-  width: 100%; /* explicit width so it fills the search container fully */
-  margin: 0; /* reset default input margin */
-  border: 2px solid #4ab8ff;
+  width: 100%;
+  margin: 0;
+  border: 2px solid #6fc4fd;
   border-radius: 10px;
   padding: 12px 50px 12px 15px;
   font-size: 16px;
   outline: none;
-  color: #1f2937;
+  color: #161d27;
   text-align: left;
 }
 .search button {
   position: absolute;
-  right: 16px; /* was 10px — gives more space from the edge */
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
@@ -157,7 +163,7 @@ body {
 }
 
 .footer b {
-  color: #4b5563;
+  color: #e98d03;
 }
 
 .message {
